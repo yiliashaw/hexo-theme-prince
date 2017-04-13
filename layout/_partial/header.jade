@@ -1,0 +1,9 @@
+header.page-header
+  .page-header-logo
+    h1
+      a.home-link(href=url_for())=theme.name
+    .log-desc=theme.description
+  ul.mian-nav-items
+    each value, key in theme.nav
+      li.menu-item
+        a(href=url_for(value) target='_self')=key

@@ -1,0 +1,10 @@
+name: Yilia Shaw
+description: Hello World.
+
+nav:
+    HOME: /
+    ARCHIVE: /archives/
+    GALLERY:  /
+    ABOUT ME: /aboutme
+
+excerpt_link: READ MORE
