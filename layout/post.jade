@@ -4,5 +4,9 @@ block container
   include mixins/post
   +post(page)
 
+
 block pagination
-block copyright
+  include mixins/paginator
+  +post()
+
+//- block copyright

@@ -2,9 +2,18 @@ mixin postInfo(page)
   .post-info= full_date(page.data,'MMM Do YYYY')
 
 mixin postTags(page)
-  .post-tags-box
-    - page.tags.each(function(tag){
-      span.post-tag= tag.name
+  if (page.tags.length >0)
+  .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
+
+    //- - page.tags.each(function(tag){
+
+    //-   a.post-tag(href=url_for())= tag.name
+    //- - })
+
+mixin postAllTags(site)
+  .all-tags-box
+    - site.tags.each(function(tag){
+      span.site-tag= tag.name
     - })
 
 //-home page
@@ -16,12 +25,14 @@ mixin posts()
           a.post-link(href=url_for(item.path))=item.title
         +postInfo(item)
         if item.excerpt
-          .post-content!= item.excerpt
-          a(href=url_for(item.path)).article-more= theme.excerpt_link
+          .post-entry!= item.excerpt
         else
-          .post-content
-            != content
-        +postTags(item)
+          .post-entry
+            != item.content
+        .post-meta
+          a(href=url_for(item.path)).article-more= theme.excerpt_link
+          if (item.tags.length >0)
+            .post-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
 
 
     - })
@@ -32,6 +43,35 @@ mixin post(page)
       h1.post-title
         != page.title
       +postInfo(page)
-      +postTags(page)
-      .post-content
+      .post-entry
         != page.content
+      if (page.tags.length >0)
+        .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
+
+mixin postTagList()
+  .archive
+    - var posts = site.posts.sort('date',-1)
+    - posts.each(function(item){
+      -item.tags.each(function(tag){
+        if page.tag == tag.name
+          .post-item
+            a.post-item-link(href=url_for(item.path))
+              span.post-title=item.title
+              span.post-date=full_date(item.data,'MMM Do YYYY')
+            //- +postTags(item)
+            .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+      -})
+    -})
+
+
+mixin postList()
+  .archive
+    - var posts = site.posts.sort('date',-1)
+    - posts.each(function(item){
+      .post-item
+        a.post-item-link(href=url_for(item.path))
+          span.post-title=item.title
+          span.post-date=full_date(item.data,'MMM Do YYYY')
+        //- if (item.tags.length >0)
+        //-   .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+    -})

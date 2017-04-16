@@ -1,13 +1,19 @@
-name: Yilia Shaw
-description: Hello World.
+name: SHAW
+description: Keep it short. Keep it simple.
 
 
 nav:
     HOME: /
     ARCHIVE: /archives/
     GALLERY:  /
-    ABOUT ME: /aboutme
 
-excerpt_link: READ MORE
+excerpt_link: Continue Reading
 
-## this is a test11111234
+aboutMeImg: /aboutme.jpg
+
+github: https://github.com/yiliashaw
+twitter: https://twitter.com/YiliaShaw
+weibo: http://weibo.com/kathleenxiao
+
+themeLink: https://github.com/yiliashaw/hexo-theme-prince
+

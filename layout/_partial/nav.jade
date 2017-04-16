@@ -1,0 +1,10 @@
+nav.page-navigation
+  .nav-container
+    .page-header-logo
+      h1.prince-log
+        a.home-link(href=url_for())=theme.name
+      //- .log-desc=theme.description
+    ul.main-nav-items
+      each value, key in theme.nav
+        li.menu-item
+          a(href=url_for(value) target='_self')=key

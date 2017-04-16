@@ -1,0 +1,18 @@
+extends _partial/layout
+
+block container
+    include mixins/post
+    +postList()
+
+
+block aside
+    include _partial/aside
+
+//- block pagination
+//-     include mixins/paginator
+//-     +index()
+
+//- block copyright
+
+
+

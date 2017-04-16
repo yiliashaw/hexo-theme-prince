@@ -4,11 +4,13 @@ html(lang=config.language)
     include head
   body
     .wrap
-      include header
+      include nav
       main.container
         block container
-      footer
+        block aside
         block pagination
-        block copyright
+    footer
+      //- block copyright
+      include copyright
 
 

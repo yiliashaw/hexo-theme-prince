@@ -1,0 +1,24 @@
+aside.sidebar
+  .aboutme.widget
+    h3.aside-title ABOUT ME
+    .about-me-image
+      img(src=theme.aboutMeImg alt='About Me')
+    p.about-me-text= theme.description
+
+  .gallery.widget
+    h3.aside-title INSTAGRAM
+    ul.instagram-pic
+
+  .all-tags.widget
+    h3.aside-title ALL TAGS
+    //- include ../mixins/post
+    //- +postAllTags(site)
+    .all-tags-box!= list_tags({show_count:false,style:null,separator:''})
+
+  .follow-me.widget
+    h3.aside-title FOLLOW ME
+    .follow-icons
+      a.github-link(href=theme.github target='_blank')
+      a.twitter-link(href=theme.twitter target='_blank')
+      a.weibo-link(href=theme.weibo target='_blank')
+
