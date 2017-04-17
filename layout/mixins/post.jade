@@ -1,14 +1,9 @@
 mixin postInfo(page)
-  .post-info= full_date(page.data,'MMM Do YYYY')
+  .post-info= full_date(page.date,'MMM Do YYYY')
 
 mixin postTags(page)
   if (page.tags.length >0)
   .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
-
-    //- - page.tags.each(function(tag){
-
-    //-   a.post-tag(href=url_for())= tag.name
-    //- - })
 
 mixin postAllTags(site)
   .all-tags-box
@@ -33,8 +28,6 @@ mixin posts()
           a(href=url_for(item.path)).article-more= theme.excerpt_link
           if (item.tags.length >0)
             .post-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
-
-
     - })
 
 mixin post(page)
@@ -49,29 +42,27 @@ mixin post(page)
         .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
 
 mixin postTagList()
-  .archive
+  .archive.col-md-8.col-xs-12
     - var posts = site.posts.sort('date',-1)
     - posts.each(function(item){
       -item.tags.each(function(tag){
         if page.tag == tag.name
           .post-item
             a.post-item-link(href=url_for(item.path))
-              span.post-title=item.title
-              span.post-date=full_date(item.data,'MMM Do YYYY')
-            //- +postTags(item)
+              span.post-title.col-sm-9.col-xs-12=item.title
+              span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
             .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
       -})
     -})
 
 
 mixin postList()
-  .archive
+  .archive.col-md-8.col-xs-12
     - var posts = site.posts.sort('date',-1)
     - posts.each(function(item){
       .post-item
         a.post-item-link(href=url_for(item.path))
-          span.post-title=item.title
-          span.post-date=full_date(item.data,'MMM Do YYYY')
-        //- if (item.tags.length >0)
-        //-   .postList-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
+          -var title = item.title.length>20?(item.title.substr(1, 22) + '...'):item.title
+          span.post-title.col-sm-9.col-xs-12= item.title
+          span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
     -})

@@ -5,12 +5,13 @@ html(lang=config.language)
   body
     .wrap
       include nav
-      main.container
+      main.prince-container
         block container
         block aside
         block pagination
     footer
-      //- block copyright
       include copyright
+    script(src="/js/jquery-3.2.1.min.js")
+    script(src="/js/bootstrap.min.js")
 
 

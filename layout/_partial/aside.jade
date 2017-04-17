@@ -1,4 +1,4 @@
-aside.sidebar
+aside.sidebar.col-md-4.col-xs-12
   .aboutme.widget
     h3.aside-title ABOUT ME
     .about-me-image
@@ -11,8 +11,6 @@ aside.sidebar
 
   .all-tags.widget
     h3.aside-title ALL TAGS
-    //- include ../mixins/post
-    //- +postAllTags(site)
     .all-tags-box!= list_tags({show_count:false,style:null,separator:''})
 
   .follow-me.widget

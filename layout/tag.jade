@@ -1,17 +1,7 @@
 extends _partial/layout
 
 block container
-    //- .b= page.total
-    //- .c= page.tag
     include mixins/post
     +postTagList()
 block aside
     include _partial/aside
-
-block pagination
-    //- include mixins/paginator
-    //- +index()
-
-//- block copyright
-
-

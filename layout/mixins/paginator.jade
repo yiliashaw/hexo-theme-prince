@@ -2,30 +2,16 @@ mixin index()
   - var prev = page.prev_link
   - var next = page.next_link
   .paginator
-    //- -var pageNum =Math.ceil(page.total / config.per_page)
-    //- a= page.total
-    //- .a= page.current
-    //- .b= page.current_url
-    //- //- if page.total = 2
     if page.prev
       a.prev-page(href=url_for(page.prev_link))!= 'Previous'
-
-    //- if page.total <= 8
-    //-   a(href=url_for('/'))= 1
-    //-   -for(let i=2; i < page.total+1; i++){
-    //-     - var pageLink = '/page/'+i+'/';
-    //-     a(href=url_for(pageLink))= i
-    //-   -}
-    //- if page.total > 8
-
     if page.next
       a.next-page(href=url_for(page.next_link))!= 'Next'
 
 mixin post()
-  -var prev = page.prev ? page.prev.path : false;
-  -var next = page.next ? page.next.path : false;
+  -var prev = page.next ? page.next.path : false;
+  -var next = page.prev ? page.prev.path : false;
   .post-nav
     if prev
-      a.prev-post(href=url_for(prev))!= page.prev.title
+      a.prev-post(href=url_for(prev))!= page.next.title
     if next
-      a.next-post(href=url_for(next))!= page.next.title
+      a.next-post(href=url_for(next))!= page.prev.title
