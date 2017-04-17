@@ -1,6 +1,31 @@
 /*-----------------------------------------------------------------------------------*/
 
 
+/*  FONT-IMPORT
+
+/*-----------------------------------------------------------------------------------*/
+
+/*@font-face {
+    font-family: 'Inconsolata';
+    src:url('../fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inconsolata';
+    src:url('../fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+    font-weight: bold;
+}*/
+@font-face {
+    font-family: 'Oswald';
+    src:url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    src:url('../fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------*/
+
+
 /*  BOOTSTRAP
 
 /*-----------------------------------------------------------------------------------*/
@@ -27,7 +52,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 body {
-  font-family: 'Inconsolata', monospace;
+  font-family:  "Trebuchet MS",monospace,'Microsoft YaHei',STHeiti;
   color: #333;
   font-size: 14px;
   background-color: #f2f2f2;
@@ -53,7 +78,7 @@ nav {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 main::after {
@@ -68,7 +93,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
 }
 
 p {
@@ -122,7 +147,7 @@ img {
 h1.prince-log {
   height: 80px;
   line-height: 80px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 700;
@@ -155,8 +180,8 @@ h1.prince-log a {
     position: relative;
   }
   .main-nav-items li a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
     color: #808080;
@@ -175,7 +200,7 @@ h1.prince-log a {
     margin: 10px auto;
     width: 92%;
     background: #fefefe;
-    box-shadow: 0 0 15px 15px rgba(200, 200, 200, .14);
+    box-shadow: 0 0 10px 10px rgba(200, 200, 200, .14);
     position: fixed;
     z-index: 1000;
     top: 60px;
@@ -183,11 +208,11 @@ h1.prince-log a {
   .main-nav-items li a {
     display: block;
     text-align: right;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #424243;
+    color: #808080;
     padding: 8px 0;
     /*line-height: 80px;*/
     text-transform: uppercase;
@@ -221,6 +246,7 @@ h1.prince-log a {
 }
 
 .post-title {
+  font-family: "Trebuchet MS",Helvetica Neue,Helvetica,'Microsoft YaHei',STHeiti,Arial,sans-serif;
   margin-bottom: 25px;
   margin-top: 20px;
   text-align: center;
@@ -232,11 +258,13 @@ h1.prince-log a {
 }
 
 .post-title a {
+  font-family:"Trebuchet MS",Helvetica Neue,Helvetica,'Microsoft YaHei',STHeiti,Arial,sans-serif;
   color: #000;
 }
 
 .post-title a:hover {
   opacity: .80;
+
 }
 
 .post-info {
@@ -245,7 +273,7 @@ h1.prince-log a {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .6px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
   font-weight: 500;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -287,7 +315,7 @@ h1.prince-log a {
   transition: all 0.2s linear;
   text-transform: uppercase;
   color: #111;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
 }
 
 .post-entry a.more-link:hover {
@@ -306,6 +334,7 @@ h1.prince-log a {
 .post-entry h6,
 .post-entry hr {
   margin-bottom: 20px;
+  font-family: "Trebuchet MS",Helvetica Neue,Helvetica,'Microsoft YaHei',STHeitiArial,sans-serif;
 }
 
 .post-entry h1,
@@ -447,6 +476,7 @@ blockquote {
 }
 
 a.article-more {
+  font-family: "Trebuchet MS", Monaco, monospace;
   font-size: 14px;
   line-height: 35px;
   padding-left: 10px;
@@ -485,6 +515,7 @@ a.article-more:hover {
 .post-tags-box a {
   color: #797979;
   line-height: 32px;
+  text-transform: uppercase;
 }
 
 .post-tags-box a:hover {
@@ -536,15 +567,23 @@ aside.sidebar {
 .post-item>a {
   display: block;
 }
-
+.post-item>a:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 .post-item>a span {
   display: inline-block;
   height: 32px;
   line-height: 32px;
   font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .post-item a .post-title {
+  font-family: "Trebuchet MS",Helvetica Neue,Helvetica,'Microsoft YaHei',STHeiti,Arial,sans-serif;
   text-align: left;
   margin: 0px;
   font-weight: 400;
@@ -561,6 +600,7 @@ aside.sidebar {
     margin: 8px 0;
   }
   .post-item a .post-title {
+    font-family: "Trebuchet MS",Helvetica Neue,Helvetica,'Microsoft YaHei',STHeiti,Arial,sans-serif;
     height: 18px;
     line-height: 18px;
     padding-left: 0px;
@@ -576,8 +616,10 @@ aside.sidebar {
 
 .post-item a:hover .post-title,
 .post-item a:hover .post-date {
-  opacity: .80;
+  opacity: .60;
 }
+
+
 
 .postList-tags-box::before {
   font-family: FontAwesome;
@@ -588,8 +630,6 @@ aside.sidebar {
 }
 
 .postList-tags-box {
-  /*padding-right: 10px;*/
-  /*display: inline-block;*/
   transition: .3s;
   color: #797979;
   margin-bottom: 10px;
@@ -599,6 +639,7 @@ aside.sidebar {
   font-size: 12px;
   color: #797979;
   line-height: 32px;
+  text-transform: uppercase;
 }
 
 .postList-tags-box li a:hover {
@@ -633,11 +674,14 @@ h3.aside-title {
 }
 
 .about-me-image {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top:75%;
+  background-image: url('/aboutme.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .about-me-text {
+  font-family:  "Trebuchet MS",monospace,'Microsoft YaHei',STHeiti;
   padding: 15px 0 0;
   font-size: 14px;
   line-height: 22px;
@@ -650,7 +694,7 @@ h3.aside-title {
 }
 
 .all-tags-box a {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
   font-size: 12px !important;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -716,11 +760,15 @@ h3.aside-title {
 .paginator a,
 .post-nav a {
   color: #656565;
-  font-family: 'Oswald', sans-serif;
-  /*letter-spacing: 1.25px;*/
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
+  display: inline-block;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .paginator a:hover,
@@ -729,34 +777,31 @@ h3.aside-title {
   color: #000;
 }
 
-.prev-page,
-.prev-post {
-  float: left;
+.prev-wrap ,.next-wrap  {
+  display: flex;
+  align-items: center;
 }
 
-.prev-page::before,
-.prev-post::before {
-  font-family: FontAwesome;
-  content: "\f100";
-  margin-right: 4px;
-  color: #000;
-  font-size: 14px;
+.prev-wrap {
+  justify-content: flex-start;
 }
+
+.next-wrap{
+  justify-content: flex-end;
+}
+
+.prev-page,
+.prev-post {
+  text-align: left;
+  padding-left:4px;
+}
+
 
 .next-page,
 .next-post {
-  float: right;
+  text-align: right;
+   padding-right:4px;
 }
-
-.next-page::after,
-.next-post::after {
-  font-family: FontAwesome;
-  content: "\f101";
-  margin-left: 4px;
-  color: #000;
-  font-size: 14px;
-}
-
 
 /*--------------------------------------------------------------*/
 
@@ -768,7 +813,7 @@ h3.aside-title {
   padding: 35px 0;
   background: #f2f2f2;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif,'Microsoft YaHei',STHeiti;
   clear: both;
   text-align: center;
 }
@@ -777,7 +822,7 @@ h3.aside-title {
   font-size: 12px;
   color: #6b6b6b;
   /*letter-spacing: 1px;*/
-  font-family: 'Inconsolata', monospace;
+  font-family:  "Trebuchet MS",monospace,'Microsoft YaHei',STHeiti;
 }
 
 .copyright p a {
