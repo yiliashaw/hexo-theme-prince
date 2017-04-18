@@ -674,6 +674,7 @@ h3.aside-title {
 }
 
 .about-me-image {
+  margin-top:20px;
   padding-top:75%;
   background-image: url('/aboutme.jpg');
   background-size: contain;
