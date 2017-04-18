@@ -1,19 +1,25 @@
+#header
 name: SHAW
 description: Keep it short. Keep it simple.
 
-
+#nav
 nav:
     HOME: /
     ARCHIVE: /archives/
-    GALLERY:  /
+    # GALLERY:  /gallery/
+    ABOUT: /about/
 
+#post
 excerpt_link: Continue Reading
 
+
+#about me
 aboutMeImg: /aboutme.jpg
 
 github: https://github.com/yiliashaw
 twitter: https://twitter.com/YiliaShaw
 weibo: http://weibo.com/kathleenxiao
 
+#copyright
 themeLink: https://github.com/yiliashaw/hexo-theme-prince
 

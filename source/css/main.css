@@ -675,7 +675,7 @@ h3.aside-title {
 
 .about-me-image {
   margin-top:20px;
-  padding-top:75%;
+  padding-top:62.5%;
   background-image: url('/aboutme.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -803,6 +803,21 @@ h3.aside-title {
   text-align: right;
    padding-right:4px;
 }
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+/*   ABOUT
+/*--------------------------------------------------------------------------------*/
+
+.post-about {
+  text-align: center;
+  margin-top:50px;
+  font-size: 18px;
+}
+
+
 
 /*--------------------------------------------------------------*/
 

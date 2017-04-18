@@ -1,17 +1,6 @@
 mixin postInfo(page)
   .post-info= full_date(page.date,'MMM Do YYYY')
 
-mixin postTags(page)
-  if (page.tags.length >0)
-  .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
-
-mixin postAllTags(site)
-  .all-tags-box
-    - site.tags.each(function(tag){
-      span.site-tag= tag.name
-    - })
-
-//-home page
 mixin posts()
   .articles
     - page.posts.each(function(item){
@@ -26,7 +15,7 @@ mixin posts()
             != item.content
         .post-meta
           a(href=url_for(item.path)).article-more= theme.excerpt_link
-          if (item.tags.length >0)
+          if (item.tags && item.tags.length >0)
             .post-tags-box!= list_tags(item.tags,{show_count:false,style:null,saperator:','})
     - })
 
@@ -38,7 +27,7 @@ mixin post(page)
       +postInfo(page)
       .post-entry
         != page.content
-      if (page.tags.length >0)
+      if (page.tags && page.tags.length >0)
         .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
 
 mixin postTagList()
