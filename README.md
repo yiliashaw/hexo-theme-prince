@@ -2,6 +2,10 @@
 
 A simple and light theme for [Hexo].
 
+- No categories.
+- No share.
+- No comment.
+
 - [Preview](https://yiliashaw.github.io/)
 
 ## Installation
@@ -9,6 +13,7 @@ A simple and light theme for [Hexo].
 ### Install
 
 ``` bash
+$ npm install hexo-renderer-jade --save
 $ git clone https://github.com/yiliashaw/hexo-theme-prince.git themes/prince
 ```
 
