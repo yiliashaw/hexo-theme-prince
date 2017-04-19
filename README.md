@@ -2,7 +2,7 @@
 
 A SIMPLE and light theme for [Hexo].
 
- No categories. No share. No comment.
+*No categories. No share. No comment.*
 
 - [Preview](https://yiliashaw.github.io/)
 
