@@ -1,13 +1,19 @@
 mixin postInfo(page)
   .post-info= full_date(page.date,'MMM Do YYYY')
 
-
+mixin postPhotos(page)
+  if page.photos && page.photos.length
+    .post-gallery
+      each photo in page.photos
+        p
+          img(src=url_for(photo))
 
 
 mixin posts()
   .articles
     - page.posts.each(function(item){
       article.post-block
+        +postPhotos(item)
         h2.post-title
           -var title = item.title !== '' ? item.title:__('no title')
           if item.link !== ''
@@ -29,6 +35,7 @@ mixin posts()
 mixin post(page)
   .post
     article.post-block
+      +postPhotos(page)
       -var title = page.title !== '' ? page.title:__('no title')
       h1.post-title
         != title

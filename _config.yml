@@ -1,6 +1,8 @@
 #header
 name: SHAW
 description: Keep it short. Keep it simple.
+favicon: /fav.png
+ga: 'UA-97813725-1'
 
 #nav
 nav:

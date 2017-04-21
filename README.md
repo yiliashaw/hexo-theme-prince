@@ -6,6 +6,8 @@ A SIMPLE and light theme for [Hexo].
 
 - [Preview](https://yiliashaw.github.io/)
 
+Inspired by [apollo](https://github.com/pinggod/hexo-theme-apollo)
+
 ## Installation
 
 ### Install
