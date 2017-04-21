@@ -82,6 +82,10 @@ nav {
   overflow: hidden;
 }
 
+.hidden-prince {
+  display: none;
+}
+
 main {
   padding-top: 80px;
 }
@@ -114,7 +118,8 @@ a {
 a:hover,
 a:link,
 a:visited,
-a:active {
+a:active,
+a:focus {
   text-decoration: none;
   color: #000;
 }
@@ -359,12 +364,22 @@ h1.prince-log a {
 .articles {
   width: 92%;
   margin: 0 auto;
+  position: relative;
+  /*top:800px;*/
+  /**/
 }
 
 .post-block {
   margin-bottom: 100px;
+  /*margin-left:-1600px;*/
 }
 
+.post-block .post-gallery>p {
+  display: none;
+}
+.post-block .post-gallery>p:nth-child(1) {
+  display: block;
+}
 .post-title {
   font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
   margin-bottom: 25px;
@@ -410,6 +425,7 @@ h1.prince-log a {
 
 .post-entry p {
   margin-bottom: 20px;
+  animation: 3s infinite alternate slideIn;
 }
 
 .post-entry a {
@@ -428,6 +444,21 @@ h1.prince-log a {
   color: #fff;
   text-decoration: none;
 }
+
+.post-entry .fancybox{
+  display: inline-block;
+  border:none !important;
+  padding:0px;
+}
+.post-entry #more,.post-entry .fancybox {
+  text-decoration: none;
+  border: none;
+}
+#more:hover,.post-entry .fancybox:hover {
+  background: transparent;
+
+}
+
 
 .post-entry a.headerlink {
   text-decoration: none;
@@ -677,7 +708,6 @@ blockquote {
 
 .gutter pre {
   padding-left: 10px;
-  padding-right: 10px;
   color: #869194;
   text-align: center;
   background-color: #eff2f3;
@@ -687,6 +717,16 @@ blockquote {
   padding-left: 10px;
   padding-right: 10px;
   background-color: #f7f7f7;
+}
+
+.post-entry .gist .gist-file {
+  /*height: 400px;
+  position: relative;*/
+}
+
+.post-entry .gist .gist-file .gist-meta {
+  position: relative;
+  bottom: 0px;
 }
 
 .post-entry input {
@@ -883,6 +923,7 @@ aside.sidebar {
 .post-item a:hover .post-title,
 .post-item a:hover .post-date {
   opacity: .60;
+
 }
 
 .postList-tags-box::before {
@@ -981,6 +1022,10 @@ h3.aside-title {
 .follow-icons {
   text-align: center;
   padding-top: 10px;
+}
+
+.follow-icons>a:hover {
+  opacity: 0.8;
 }
 
 .github-link::after {
