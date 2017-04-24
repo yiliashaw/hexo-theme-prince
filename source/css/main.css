@@ -642,7 +642,7 @@ blockquote {
   overflow: auto;
   padding: 0;
   font-size: 13px;
-  background: #f7f7f7;
+  background: #f7f7f7 !important;
   line-height: 1.6;
 }
 
