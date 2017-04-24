@@ -1,6 +1,6 @@
 # Prince
 
-A SIMPLE and light theme for [Hexo].
+A SIMPLE and CLEAN theme for [Hexo].
 
 *No categories. No share. No comment.*
 
