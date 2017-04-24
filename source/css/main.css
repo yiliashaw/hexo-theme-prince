@@ -377,9 +377,11 @@ h1.prince-log a {
 .post-block .post-gallery>p {
   display: none;
 }
+
 .post-block .post-gallery>p:nth-child(1) {
   display: block;
 }
+
 .post-title {
   font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
   margin-bottom: 25px;
@@ -445,20 +447,22 @@ h1.prince-log a {
   text-decoration: none;
 }
 
-.post-entry .fancybox{
+.post-entry .fancybox {
   display: inline-block;
-  border:none !important;
-  padding:0px;
+  border: none !important;
+  padding: 0px;
 }
-.post-entry #more,.post-entry .fancybox {
+
+.post-entry #more,
+.post-entry .fancybox {
   text-decoration: none;
   border: none;
 }
-#more:hover,.post-entry .fancybox:hover {
+
+#more:hover,
+.post-entry .fancybox:hover {
   background: transparent;
-
 }
-
 
 .post-entry a.headerlink {
   text-decoration: none;
@@ -647,6 +651,10 @@ blockquote {
   margin-bottom: 20px;
 }
 
+.post-entry table.js-file-line-container {
+  margin-bottom: 0px;
+}
+
 .post-entry pre,
 .post-entry .highlight {
   overflow: auto;
@@ -722,6 +730,8 @@ blockquote {
 .post-entry .gist .gist-file {
   /*height: 400px;
   position: relative;*/
+  margin-bottom: 0px;
+  border: none;
 }
 
 .post-entry .gist .gist-file .gist-meta {
@@ -827,6 +837,18 @@ a.article-more:hover {
 }
 
 
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+/*  GALLERY
+/*-----------------------------------------------------------------------------------*/
+.post-gallery-page p {
+  display: inline-block;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 
 
@@ -923,7 +945,6 @@ aside.sidebar {
 .post-item a:hover .post-title,
 .post-item a:hover .post-date {
   opacity: .60;
-
 }
 
 .postList-tags-box::before {

@@ -8,7 +8,7 @@ ga: 'UA-97813725-1'
 nav:
     HOME: /
     ARCHIVE: /archives/
-    # GALLERY:  /gallery/
+    GALLERY:  /gallery/
     ABOUT: /about/
 
 #post

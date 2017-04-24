@@ -1,8 +1,14 @@
 extends _partial/layout.jade
 
 block container
-  h3.aside-title ABOUT ME
-  .about-me-image
-  .post
-    article.post-block
-      .post-entry.post-about!= page.content
+  if page.title === 'about'
+    h3.aside-title ABOUT ME
+    .about-me-image
+    .post
+      article.post-block
+        .post-entry.post-about!= page.content
+  if page.title === 'gallery'
+    h3.gallery-title.aside-title GALLERY
+    .post
+      article.post-block
+        .post-entry.post-gallery-page!= page.content
