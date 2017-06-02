@@ -1,3 +1,116 @@
+*,
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+label,
+fieldset,
+input,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0
+}
+
+li {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+fieldset,
+img {
+  border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal
+}
+
+caption,
+th {
+  text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+q:before,
+q:after {
+  content: ''
+}
+
+strong {
+  font-weight: bold
+}
+
+em {
+  font-style: italic
+}
+
+a img {
+  border: none
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 
 
@@ -6,7 +119,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 
-@font-face {
+/*@font-face {
   font-family: 'Oswald';
   src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
 }
@@ -15,7 +128,7 @@
   font-family: 'Oswald';
   src: url('../fonts/Oswald/Oswald-Bold.ttf') format('truetype');
   font-weight: bold;
-}
+}*/
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -33,7 +146,6 @@
   height: 80px;
   margin: 0px;
 }
-
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -66,10 +178,6 @@ nav {
   box-shadow: 0 0 15px 15px rgba(200, 200, 200, .14);
   position: relative;
   overflow: hidden;
-}
-
-.hidden-prince {
-  display: none;
 }
 
 main {
@@ -813,13 +921,12 @@ a.article-more:hover {
 }
 
 
-
-
 /*-----------------------------------------------------------------------------------*/
 
 
 /*  GALLERY
 /*-----------------------------------------------------------------------------------*/
+
 .post-gallery-page p {
   display: inline-block;
 }

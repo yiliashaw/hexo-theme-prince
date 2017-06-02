@@ -3,20 +3,19 @@ html(lang=config.language)
   head
     include head
   body
-    .wrap.hidden-prince
+    .wrap
       include nav
       main.prince-container
         block container
         block aside
         block pagination
-    footer.hidden-prince
+    footer
       include copyright
-    script(src='/js/jquery-3.2.1.min.js')
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
     script(src='/js/bootstrap.min.js')
-    link(href='/fancybox/jquery.fancybox.min.css', rel='stylesheet')
-    script(src='/fancybox/jquery.fancybox.min.js')
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js')
+
     script(src='/js/script.js')
-    script(src='/js/gist-embed.min.js')
-
-
-
