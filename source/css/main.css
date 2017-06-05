@@ -119,7 +119,7 @@ a img {
 /*-----------------------------------------------------------------------------------*/
 
 
-/*@font-face {
+@font-face {
   font-family: 'Oswald';
   src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
 }
@@ -128,7 +128,7 @@ a img {
   font-family: 'Oswald';
   src: url('../fonts/Oswald/Oswald-Bold.ttf') format('truetype');
   font-weight: bold;
-}*/
+}
 
 
 /*-----------------------------------------------------------------------------------*/
