@@ -90,4 +90,46 @@
   }, a(function () {
     a("[data-gist-id]").gist()
   })
+
 })(jQuery);
+
+const postContainerEl = document.querySelector('.prince-container')
+
+// console.log(postContainerEl.getComputedStyle())
+
+setTocStyle = () => {
+  const tocEl = document.querySelector('.prince-container .toc')
+  const tocWidth = tocEl.getBoundingClientRect().width
+  const postWidth = document.querySelector('.prince-container').getBoundingClientRect().width
+  const bodyWidth = document.body.getBoundingClientRect().width
+  console.log('(bodyWidth - postWidth) / 2 < tocWidth', (bodyWidth - postWidth) / 2 < tocWidth, bodyWidth,  (bodyWidth - postWidth) / 2, tocWidth)
+  tocEl.style.left = `${(bodyWidth - postWidth) / 2 + postWidth + 20}px`
+  tocEl.style.visibility = (bodyWidth - postWidth) / 2 < tocWidth ? 'hidden' : 'visible'
+  
+}
+
+
+const throttle = (fn, interval = 100) => {
+  let timer = null
+
+  return function() {
+    if (timer) {
+      return
+    }
+    timer = setTimeout(() => {
+      fn()
+      clearTimeout(timer)
+      timer = null
+    }, interval)
+    
+  }
+
+}
+
+const handlerWindowResize = throttle(setTocStyle, 50)
+
+
+document.addEventListener('DOMContentLoaded', setTocStyle)
+window.addEventListener('resize', handlerWindowResize)
+
+

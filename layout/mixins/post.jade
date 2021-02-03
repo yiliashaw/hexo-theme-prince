@@ -44,6 +44,7 @@ mixin post(page)
         != page.content
       if (page.tags && page.tags.length >0)
         .post-tags-box!= list_tags(page.tags,{show_count:false,style:null,saperator:','})
+  !=toc(page.content, {list_number:false})
 
 mixin postTagList()
   .archive.col-md-8.col-xs-12

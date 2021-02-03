@@ -130,6 +130,45 @@ a img {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url('../fonts/SourceCodePro/SourceCodePro-Medium.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'SourceCodePro-Medium';
+  src: url('../fonts/SourceCodePro/SourceCodePro-Medium.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'SourceCodePro-Bold';
+  src: url('../fonts/SourceCodePro/SourceCodePro-Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'SourceCodePro-SemiBold';
+  src: url('../fonts/SourceCodePro/SourceCodePro-SemiBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'FiraMono';
+  src: url('../fonts/Fira_Mono/FiraMono-Regular.ttf')
+}
+@font-face {
+  font-family: 'FiraMono-Medium';
+  src: url('../fonts/Fira_Mono/FiraMono-Medium.ttf')
+}
+@font-face {
+  font-family: 'FiraMono-Bold';
+  src: url('../fonts/Fira_Mono/FiraMono-Bold.ttf')
+}
+@font-face {
+  font-family: 'RobotoCondensed';
+  src: url('../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf')
+}
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: url('../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf')
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -143,7 +182,7 @@ a img {
 }
 
 .navbar-toggle {
-  height: 80px;
+  height: 60px;
   margin: 0px;
 }
 
@@ -153,17 +192,21 @@ a img {
 
 /*  2. BASE CSS
 /*-----------------------------------------------------------------------------------*/
+/* html {
+  padding-top: 60px;
+} */
 
 body {
-  font-family: "Trebuchet MS", monospace, 'Microsoft YaHei', STHeiti;
+  font-family: 'PingFangSC-Regular', monospace, 'Microsoft YaHei';
   color: #333;
   font-size: 14px;
   background-color: #f2f2f2;
+  /* padding-top: 60px; */
 }
 
 nav {
   background: #fff;
-  height: 80px;
+  height: 60px;
   position: fixed;
   z-index: 999;
   width: inherit;
@@ -172,17 +215,23 @@ nav {
 
 .wrap {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
-  background: #fff;
+  /* background: #fff; */
+  background-color: #f2f2f2;
   box-shadow: 0 0 15px 15px rgba(200, 200, 200, .14);
   position: relative;
   overflow: hidden;
+  padding-top: 100px;
 }
 
+
 main {
-  padding-top: 80px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 500px;
   width: 95%;
+  max-width: 960px;
+  background: #fff;
   margin: 0 auto;
 }
 
@@ -198,12 +247,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+  font-family: 'PingFangSC-Regular', 'Microsoft YaHei';
 }
 
 p {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 a {
@@ -243,7 +292,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: Monaco, Menlo, consolas, monospace;
   font-size: 14px;
 }
 
@@ -346,9 +395,20 @@ pre .javascript .function {
 /*  3. NAVIGATION
 /*-----------------------------------------------------------------------------------*/
 
+.page-navigation {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  left: 0;
+  top: 0;
+}
+
 .nav-container {
   width: 92%;
+  max-width: 960px;
   margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .nav-container:after {
@@ -359,20 +419,20 @@ pre .javascript .function {
 
 .page-header-logo {
   float: left;
-  line-height: 80px;
-  height: 80px;
+  line-height: 60px;
+  height: 60px;
   position: relative;
   z-index: 999;
 }
 
 h1.prince-log {
-  height: 80px;
-  line-height: 80px;
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  height: 60px;
+  margin-right: 20px;
+  line-height: 60px;
+  font-family: 'ArialRoundedMTBold', 'PingFang-Medium', 'Microsoft YaHei';
+  letter-spacing: 1px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h1.prince-log a {
@@ -381,9 +441,9 @@ h1.prince-log a {
 
 .log-desc {
   color: #424243;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 600;
   margin-top: 12px;
   display: none;
@@ -401,13 +461,12 @@ h1.prince-log a {
     position: relative;
   }
   .main-nav-items li a {
-    font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+    font-family: 'ArialRoundedMTBold', 'PingFangSC-Regular', 'Microsoft YaHei';
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
     color: #808080;
-    line-height: 80px;
-    text-transform: uppercase;
+    line-height: 60px;
     display: inline-block;
     -o-transition: .3s;
     -ms-transition: .3s;
@@ -429,15 +488,12 @@ h1.prince-log a {
   .main-nav-items li a {
     display: block;
     text-align: right;
-    font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+    font-family: 'PingFangSC-Regular', 'Microsoft YaHei';
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
     color: #808080;
     padding: 8px 0;
-    /*line-height: 80px;*/
-    text-transform: uppercase;
-    /*display: inline-block;*/
     -o-transition: .3s;
     -ms-transition: .3s;
     -moz-transition: .3s;
@@ -464,7 +520,7 @@ h1.prince-log a {
 }
 
 .post-block {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .post-block .post-gallery>p {
@@ -476,19 +532,19 @@ h1.prince-log a {
 }
 
 .post-title {
-  font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
+  font-family: "PingFangSC-SemiBold", 'Microsoft YaHei', Arial, sans-serif;
   margin-bottom: 25px;
   margin-top: 20px;
   text-align: center;
-  font-size: 18px;
-  letter-spacing: 1.25px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: 28px;
+  /* letter-spacing: 1.25px; */
+  /* font-weight: 400; */
+  /* text-transform: uppercase; */
   margin-bottom: 10px;
 }
 
 .post-title a {
-  font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
+  font-family: "PingFangSC-Medium", 'Microsoft YaHei', Arial, sans-serif;
   color: #000;
 }
 
@@ -499,10 +555,10 @@ h1.prince-log a {
 .post-info {
   font-size: 12px;
   color: #797979;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   letter-spacing: .6px;
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+  font-family: 'PingFangSC-Regular', sans-serif, 'Microsoft YaHei';
   font-weight: 500;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -519,11 +575,13 @@ h1.prince-log a {
 }
 
 .post-entry p {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   animation: 3s infinite alternate slideIn;
 }
 
-.post-entry a {
+.post-entry a,
+.toc a
+ {
   padding: 0 2px;
   border-bottom: 1px solid #333;
   -webkit-transition: all 0.2s linear;
@@ -533,7 +591,9 @@ h1.prince-log a {
   transition: all 0.2s linear;
 }
 
-.post-entry a:hover {
+.post-entry a:hover,
+.toc a:hover
+{
   background-color: #444;
   border: none;
   color: #fff;
@@ -570,8 +630,15 @@ h1.prince-log a {
 .post-entry h5,
 .post-entry h6,
 .post-entry hr {
-  margin-bottom: 20px;
-  font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeitiArial, sans-serif;
+  margin-bottom: 10px;
+  font-family: 'PingFangSC-Regular', monospace, 'Microsoft YaHei', STHeiti;
+}
+
+.post-entry h1,
+.post-entry h2,
+.post-entry h3
+{
+  margin-top: 20px;
 }
 
 .post-entry h1,
@@ -585,27 +652,29 @@ h1.prince-log a {
 }
 
 .post-entry h1 {
-  font-size: 28px;
-}
-
-.post-entry h2 {
-  font-size: 26px;
-}
-
-.post-entry h3 {
-  font-size: 24px;
-}
-
-.post-entry h4 {
   font-size: 20px;
 }
 
-.post-entry h5 {
+.post-entry h2 {
   font-size: 18px;
+  line-height: 22px;
+}
+
+.post-entry h3 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.post-entry h4 {
+  font-size: 14px;
+}
+
+.post-entry h5 {
+  font-size: 12px;
 }
 
 .post-entry h6 {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .post-entry hr {
@@ -628,8 +697,8 @@ blockquote {
   border-left: 3px solid #424243;
   color: #999;
   padding: 0 18px;
-  font-family: "Georgia";
-  font-size: 15px;
+  font-family: 'PingFangSC-Regular', "Georgia";
+  font-size: 12px;
   line-height: 28px;
   margin: 0px;
   font-style: italic;
@@ -675,19 +744,26 @@ blockquote {
 
 .post-entry dl,
 .post-entry ul,
-.post-entry ol {
-  padding-left: 45px;
-  margin-bottom: 20px;
+.post-entry ol
+{
+  padding-left: 25px;
+  margin-bottom: 2px;
+}
+ol.toc,
+ol.toc-child {
+  padding-left: 10px;
 }
 
 .post-entry ul li {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   list-style: square;
 }
 
-.post-entry ol li {
+.post-entry ol li,
+.toc li
+{
   margin-bottom: 8px;
-  list-style: decimal;
+  list-style: square;
 }
 
 .post-entry dt {
@@ -790,7 +866,7 @@ blockquote {
 
 .post-entry pre,
 .post-entry code {
-  font-family: consolas, Menlo, "Georgia", "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: Monaco, 'PT Mono', Menlo, consolas, "Georgia", "PingFang SC", "Microsoft YaHei", monospace;
 }
 
 .gutter {
@@ -874,11 +950,9 @@ blockquote {
 }
 
 a.article-more {
-  font-family: "Trebuchet MS", Monaco, monospace;
-  font-size: 14px;
+  font-family: ArialRoundedMTBold, "PingFangSC-Regular", 'Microsoft YaHei';
+  font-size: 12px;
   line-height: 35px;
-  padding-left: 10px;
-  text-transform: uppercase;
   letter-spacing: 1px;
   color: #797979;
   font-weight: 600;
@@ -913,7 +987,7 @@ a.article-more:hover {
 .post-tags-box a {
   color: #797979;
   line-height: 32px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .post-tags-box a:hover {
@@ -941,6 +1015,18 @@ a.article-more:hover {
 .post {
   width: 92%;
   margin: 0 auto;
+}
+
+main {
+  position: relative;
+}
+main .toc {
+  position: fixed;
+  right: 0px;
+  top: 100px;
+  padding-right: 20px;
+  visibility: hidden;
+  /* transform: translate(-100%, 0); */
 }
 
 
@@ -994,11 +1080,11 @@ aside.sidebar {
 }
 
 .post-item a .post-title {
-  font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
+  font-family: "PingFangSC-Regular", 'Microsoft YaHei', STHeiti, Arial, sans-serif;
   text-align: left;
   margin: 0px;
   font-weight: 400;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media only screen and (max-width: 767px) {
@@ -1011,7 +1097,7 @@ aside.sidebar {
     margin: 8px 0;
   }
   .post-item a .post-title {
-    font-family: "Trebuchet MS", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
+    font-family: "PingFangSC-Medium", Helvetica Neue, Helvetica, 'Microsoft YaHei', STHeiti, Arial, sans-serif;
     height: 18px;
     line-height: 18px;
     padding-left: 0px;
@@ -1048,7 +1134,7 @@ aside.sidebar {
   font-size: 12px;
   color: #797979;
   line-height: 32px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .postList-tags-box li a:hover {
@@ -1072,12 +1158,12 @@ h3.aside-title {
   padding-top: 20px;
   padding-bottom: 10px;
   color: #262626;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-bottom: 1px dotted #dcdcdc;
   font-size: 20px;
   margin-bottom: 0;
   text-align: center;
-  font-family: inherit;
+  font-family: ArialRoundedMTBold, 'PingFangSC-Regular';
   font-weight: 500;
   line-height: 1.1;
 }
@@ -1091,7 +1177,7 @@ h3.aside-title {
 }
 
 .about-me-text {
-  font-family: "Trebuchet MS", monospace, 'Microsoft YaHei', STHeiti;
+  font-family: "PingFangSC-Regular", monospace, 'Microsoft YaHei', STHeiti;
   padding: 15px 0 0;
   font-size: 14px;
   line-height: 22px;
@@ -1104,10 +1190,10 @@ h3.aside-title {
 }
 
 .all-tags-box a {
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+  font-family: 'PingFangSC-Regular', sans-serif, 'Microsoft YaHei', STHeiti;
   font-size: 12px !important;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: #f2f2f2;
   color: #666;
   padding: 6px 7px 6px;
@@ -1174,8 +1260,8 @@ h3.aside-title {
 .paginator a,
 .post-nav a {
   color: #656565;
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
-  text-transform: uppercase;
+  font-family: 'PingFangSC-Regular', sans-serif, 'Microsoft YaHei', STHeiti;
+  /* text-transform: uppercase; */
   font-size: 14px;
   font-weight: 500;
   display: inline-block;
@@ -1240,7 +1326,7 @@ h3.aside-title {
   padding: 35px 0;
   background: #f2f2f2;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
+  font-family: 'PingFangSC-Regular', sans-serif, 'Microsoft YaHei', STHeiti;
   clear: both;
   text-align: center;
 }
@@ -1248,7 +1334,7 @@ h3.aside-title {
 .copyright p {
   font-size: 12px;
   color: #6b6b6b;
-  font-family: "Trebuchet MS", monospace, 'Microsoft YaHei', STHeiti;
+  font-family: "PingFangSC-Regular", monospace, 'Microsoft YaHei', STHeiti;
 }
 
 .copyright p a {

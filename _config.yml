@@ -6,13 +6,13 @@ ga: ''
 
 #nav
 nav:
-    HOME: /
-    ARCHIVE: /archives/
-    GALLERY:  /gallery/
-    ABOUT: /about/
+    Home: /
+    Archive: /archives/
+    # GALLERY:  /gallery/
+    About: /about/
 
 #post
-excerpt_link: Continue Reading
+excerpt_link: Read More
 
 
 #about me
