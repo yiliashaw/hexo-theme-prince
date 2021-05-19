@@ -1,15 +1,15 @@
 #header
-name: SHAW
-description: Keep it short. Keep it simple.
+name: Hello
+description: simple & clean
 favicon: /fav.png
 ga: ''
 
 #nav
 nav:
-    Home: /
-    Archive: /archives/
+    HOME: /
+    ARCHIVE: /archives/
     # GALLERY:  /gallery/
-    About: /about/
+    # ABOUT: /about/
 
 #post
 excerpt_link: Read More

@@ -29,6 +29,7 @@ td {
 
 li {
   list-style-type: none;
+  line-height: 2em;
 }
 
 table {
@@ -252,7 +253,7 @@ h6 {
 
 p {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.8em;
 }
 
 a {
@@ -299,7 +300,8 @@ samp {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #4d4d4c;
+  /* color: #4d4d4c; */
+  color: rgb(140, 26, 17);
   background: #f7f7f7;
   border-radius: 3px;
   font-size: 13px;
